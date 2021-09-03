@@ -11,13 +11,28 @@
     <div class="section">
       <h1>THE BEAUTY OF AFRICAN HERITAGE</h1>
     </div>
-    <div>
+    <div class="data">
       <div class="section description">
         <h2>Akan Names</h2>
         <p>background about akan names</p>
       </div>
       <div class="form">
-
+        <form id="form">
+          <legend>Enter you info below to see your Akan name</legend>
+          <fieldset>
+            Date of Birth: <input type="number" id="date">
+            Month of Birth: <input type="number" id="month">
+            Year of Birth: <input type="number" id="year">
+            <select name="dropdown" id="gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </fieldset>
+          <br>
+          <br>
+          <input type="submit" value="Submit" id="button">
+          <h3 id="output"></h3>
+        </form>
       </div>
     </div>
   </body>
