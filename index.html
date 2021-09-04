@@ -22,15 +22,20 @@
           <fieldset>
             <em>Date of Birth:</em>
             <input type="number" id="date" placeholder="DD">
-            <!-- <script>
-                function validateDate(){
-                  let date=document.getElementById('date');
-                  if (date <1 || date>31){
-                    alert("You entered an invalid date");
-                  }
-                }
-            </script> -->
-            <input type="number" id="month" placeholder="MM">
+            <select name="dropdown" id="month">
+              <option value="0">Jan</option>
+              <option value="3">Feb</option>
+              <option value="3">Mar</option>
+              <option value="6">Apr</option>
+              <option value="1">May</option>
+              <option value="4">Jun</option>
+              <option value="6">Jul</option>
+              <option value="2">Aug</option>
+              <option value="5">Sep</option>
+              <option value="0">Oct</option>
+              <option value="3">Nov</option>
+              <option value="5">Dec</option>
+            </select>
             <input type="number" id="year" placeholder="YYYY">
           </fieldset>
           <em>Gender:</em>
