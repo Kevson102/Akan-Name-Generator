@@ -17,7 +17,8 @@ function akanGenerator (){
   var nameNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
   var femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
-
+  // With all the variables that we need, we can now write the formula for calculating the day of the week
+  var dayOfWeek = (((century/4)-2*century-1)+((5-year/4))+((26*(month+1)/10))+date) % 7;
   
 }
 
