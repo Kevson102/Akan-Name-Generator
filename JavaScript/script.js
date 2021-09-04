@@ -13,6 +13,10 @@ function akanGenerator (){
   var year = yearOfBirth.slice(2,4);
   // The month and the date require no modification.
 
+  // We now create arrays to hold the male Akan names and the female Akan names.
+  var nameNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+  var femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+
 
   
 }
