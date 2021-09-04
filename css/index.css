@@ -56,3 +56,12 @@ em{
   font-style: normal;
   font-weight: bold;
 }
+#output {
+  background-color: white;
+  text-align: center;
+}
+legend {
+  background-color: #59BA37;
+  text-align: center;
+  color: #DC0000;
+}
