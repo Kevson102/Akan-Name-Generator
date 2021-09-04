@@ -19,7 +19,8 @@ function akanGenerator (){
 
   // With all the variables that we need, we can now write the formula for calculating the day of the week
   var dayOfWeek = (((century/4)-2*century-1)+((5-year/4))+((26*(month+1)/10))+date) % 7;
-  
+  // since the day of week cannot be a decimal, we round down any decimal number to the nearest whole number.
+  var dayOfWeek = Math.floor(dayOfWeek);
 }
 
 ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD )
