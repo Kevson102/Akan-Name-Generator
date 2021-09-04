@@ -1,16 +1,20 @@
 function akanGenerator (){
   // We begin by collecting the form inputs.
 
-  var date = document.getElementById('date').value;
-  var month = document.getElementById('month').value;
-  var yearOfBirth = document.getElementById('year').value;
+  // var date = document.getElementById('date').value;
+  // var month = document.getElementById('month').value;
+  // var yearOfBirth = document.getElementById('year').value;
 
-  var genders = document.getElementById('gender');
-  var gender = genders.options[genders.selectedIndex].text;
+  // var genders = document.getElementById('gender');
+  // var gender = genders.options[genders.selectedIndex].text;
+  var date = 4;
+  var month = 7;
+  var year = 2021;
+  // var gender = "Male";
 
   // from the collected data, we extract the values required by the formula.
-  var century = yearOfBirth.slice(0,2);
-  var year = yearOfBirth.slice(2,4);
+  var century = year.slice(0,2);
+  var year = year.slice(2,4);
   // The month and the date require no modification.
 
   // We now create arrays to hold the male Akan names and the female Akan names.
@@ -19,14 +23,17 @@ function akanGenerator (){
   var weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
   // With all the variables that we need, we can now write the formula for calculating the day of the week
-  var dayOfWeek = (((century/4)-2*century-1)+((5-year/4))+((26*(month+1)/10))+date) % 7;
+  var dayOfWeek = (date +Math.floor(2.6*month-0.2)-2*century+year+Math.floor(year/4)+Math.floor(century/4)) % 7;
+  // var dayOfWeek = (((century/4)-2*century-1)+((5-year/4))+((26*(month+1)/10))+date) % 7;
   // since the day of week cannot be a decimal, we round down any decimal number to the nearest whole number.
-  var dayOfWeek = Math.floor(dayOfWeek);
+  // var dayOfWeek = Math.floor(dayOfWeek);
 
   // Since the Akan names are given based on gender, we create a control flow.
-  if (gender === "Male"){
-    document.getElementById('output').innerHTML = "Since you are "+ gender+" and you were born on "+weekDays[dayOfWeek]+", your Akan name is "+maleNames[dayOfWeek]+".";
-  } else {
-    document.getElementById('output').innerHTML = "Since you are "+ gender+" and you were born on "+weekDays[dayOfWeek]+", your Akan name is "+femaleNames[dayOfWeek]+".";
-  }
+//   if (gender === "Male"){
+//     document.getElementById('output').innerHTML = "Since you are "+ gender+" and you were born on "+weekDays[dayOfWeek+2]+", your Akan name is "+maleNames[dayOfWeek-1]+".";
+//   } else {
+//     document.getElementById('output').innerHTML = "Since you are "+ gender+" and you were born on "+weekDays[dayOfWeek-1]+", your Akan name is "+femaleNames[dayOfWeek-1]+".";
+//   }
 }
+akanGenerator();
+console.log(dayOfWeek)
