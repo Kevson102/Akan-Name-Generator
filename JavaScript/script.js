@@ -8,6 +8,11 @@ function akanGenerator (){
   var genders = document.getElementById('gender');
   var gender = genders.options[genders.selectedIndex].text;
 
+  // from the collected data, we extract the values required by the formula.
+  var century = yearOfBirth.slice(0,2);
+  var year = yearOfBirth.slice(2,4);
+  // The month and the date require no modification.
+
 
   
 }
