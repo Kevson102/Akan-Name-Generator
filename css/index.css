@@ -26,8 +26,33 @@ body {
 .data {
   display: flex;
 }
-fieldset {
+/* fieldset {
   display: flex;
   flex-direction: column;
   
+} */
+.form {
+  background-color: rgb(143, 132, 132);
+  opacity: 70%;
+  margin-left: 150px;
+  height: 300px;
+
+}
+input {
+  width: 70px;
+  color: #DC0000;
+  background-color: #3dd804;
+}
+#button {
+  position: relative;
+  left: 200px;
+  background-color: #DC0000;
+  color: white;
+  border-radius: 50%;
+}
+em{
+  background-color: #DC0000;
+  color: #59BA37;
+  font-style: normal;
+  font-weight: bold;
 }
