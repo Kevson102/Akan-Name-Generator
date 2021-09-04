@@ -22,6 +22,14 @@
           <fieldset>
             <em>Date of Birth:</em>
             <input type="number" id="date" placeholder="DD">
+            <!-- <script>
+                function validateDate(){
+                  let date=document.getElementById('date');
+                  if (date <1 || date>31){
+                    alert("You entered an invalid date");
+                  }
+                }
+            </script> -->
             <input type="number" id="month" placeholder="MM">
             <input type="number" id="year" placeholder="YYYY">
           </fieldset>
@@ -32,7 +40,7 @@
           </select>
           <br>
           <br>
-          <input type="submit" value="Submit" id="button">
+          <input type="submit" value="Submit" id="button" class="btn btn-primary" onclick="akanGenerator (); return false"/>
           <h3 id="output"></h3>
         </form>
       </div>

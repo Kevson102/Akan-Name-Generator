@@ -19,9 +19,15 @@ function akanGenerator (){
   var weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
   // With all the variables that we need, we can now write the formula for calculating the day of the week
-  var dayOfWeek = (((century/4)-2*century-1)+((5-year/4))+((26*(month+1)/10))+date) % 7;
+  var calculation1 = Math.floor(century/4);
+  var calculation2 = Math.floor(2*century-1);
+  var summation1 = calculation1 +calculation2;
+  var calculation3 = Math.floor(5*year/4);
+  var calculation4 = Math.floor(26*(month+1)/10);
+  var dayOfWeek = (summation1 + calculation3 +calculation4 +date) % 7;
+  // var dayOfWeek = (((century/4)-2*century-1)+((5*year/4))+((26*(month+1)/10))+date) % 7;
   // since the day of week cannot be a decimal, we round down any decimal number to the nearest whole number.
-  var dayOfWeek = Math.floor(dayOfWeek);
+  // var dayOfWeek = Math.floor(dayOfWeek);
 
   // Since the Akan names are given based on gender, we create a control flow.
   if (gender === "Male"){
