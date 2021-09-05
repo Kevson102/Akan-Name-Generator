@@ -6,7 +6,7 @@
 The Akan Name Generator is a website that accepts the user input (Date of birth and Gender), and used these inputs to generate the day of the week when the user was born alongside their Akan name.
 
 ## Prototype.
-<img src="" raw = true alt = "Website design">
+<img src="./images/prototype.png" raw = true alt = "Website design">
 
 ## Setup/Installation Requirements.
 * Install Google Chrome on your machine.
@@ -17,7 +17,7 @@ The Akan Name Generator is a website that accepts the user input (Date of birth 
 https://kevson102.github.io/Akan-Name-Generator/
 
 ## Known Bugs
-* The name is generated for years between 1600 and 3099.
+* The name is generated for years between 1600 and 3099 only.
 ## Technologies Used
 1. HTML
 2. CSS
