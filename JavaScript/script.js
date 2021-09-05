@@ -47,7 +47,6 @@ function akanGenerator (){
       document.getElementById('output').innerHTML = "Since you are "+ gender+" and you were born on "+weekDays[dayOfWeek]+", your Akan name is "+femaleNames[dayOfWeek]+".";
     }
   }
-
 }
 
 // Function for resetting the form.

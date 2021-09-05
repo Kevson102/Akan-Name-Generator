@@ -12,9 +12,10 @@ body {
   padding: 50px
 }
 .description {
-  min-width: 500px;
-  height: 450px;
+  width: 500px;
+  height: auto;
 }
+
 .description > h2 {
   color: #DC0000;
   text-align: center;
@@ -22,6 +23,10 @@ body {
 .description > p {
   color: black;
   font-size: 20px;
+  text-align: center;
+}
+#prompt {
+  color: #DC0000;
 }
 .data {
   display: flex;
@@ -35,8 +40,12 @@ body {
   background-color: rgb(143, 132, 132);
   opacity: 70%;
   margin-left: 150px;
+  margin-top: 75px;
   height: 300px;
 
+}
+img{
+  float: right;
 }
 input {
   width: 70px;
@@ -49,12 +58,23 @@ input {
   background-color: #DC0000;
   color: white;
   border-radius: 40%;
+  position: relative;
+  left: 196px;
 }
 em{
   background-color: #DC0000;
   color: #59BA37;
   font-style: normal;
   font-weight: bold;
+}
+#month {
+  width: 100px;
+  height: 30px;
+  background-color: #3dd804;
+}
+#gender {
+  background-color: #3dd804;
+  margin-left: 42px;
 }
 #output {
   width: 450px;
@@ -69,4 +89,104 @@ legend {
   background-color: #59BA37;
   text-align: center;
   color: #DC0000;
+}
+.copyright{
+  background-color: #3dd804;
+  margin-top: 10px;
+  text-align: center;
+}
+@media screen and (min-width:320px) and (max-width:374px) {
+  .data {
+    display: flex;
+    flex-direction: column;
+  }
+  .form {
+    margin-top: 10px;
+    margin-left: 0;
+    width: auto;
+  }
+  .description{
+    width: auto;
+  }
+  #output {
+    width: auto;
+  }
+  #button {
+    position: relative;
+    left: 90px;
+  }
+  #reset {
+    position: relative;
+    left: 105px;
+  }
+  #month{
+    width: auto;
+  }
+  #date {
+    width: 35px;
+  }
+}
+@media screen and (min-width:375px) and (max-width:480px) {
+  .data {
+    display: flex;
+    flex-direction: column;
+  }
+  .form {
+    margin-top: 10px;
+    margin-left: 0;
+    width: auto;
+  }
+  .description{
+    width: auto;
+  }
+  #output {
+    width: auto;
+  }
+  #button {
+    position: relative;
+    left: 150px;
+  }
+  #reset {
+    position: relative;
+    left: 170px;
+  }
+  #month{
+    width: auto;
+  }
+
+}
+@media screen and (min-width:481px) and (max-width:768px) {
+  .data {
+    display: flex;
+    flex-direction: column;
+  }
+  .form {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+  .description{
+    width: auto;
+  }
+  #output {
+  width: auto;
+  }
+  #button {
+    position: relative;
+    left: 350px;
+  }
+  #reset {
+    position: relative;
+    left: 370px;
+  }
+}
+@media screen and (min-width:769px) and (max-width:1024px) {
+  .form {
+    margin-left: 50px;
+  }
+}
+@media screen and (min-width:1025px) and (max-width:1200px) {
+  
+}
+@media screen and (min-width:1201px){
+  
 }
