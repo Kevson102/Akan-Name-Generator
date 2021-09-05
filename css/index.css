@@ -44,11 +44,11 @@ input {
   background-color: #3dd804;
 }
 #button {
-  position: relative;
-  left: 200px;
+  margin: auto;
+  width: 100px;
   background-color: #DC0000;
   color: white;
-  border-radius: 50%;
+  border-radius: 40%;
 }
 em{
   background-color: #DC0000;
@@ -57,8 +57,13 @@ em{
   font-weight: bold;
 }
 #output {
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: white;
+  color: black;
   text-align: center;
+  font-style: italic;
 }
 legend {
   background-color: #59BA37;

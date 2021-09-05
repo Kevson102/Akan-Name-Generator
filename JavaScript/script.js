@@ -22,7 +22,9 @@ function akanGenerator (){
 
   // With all the variables that we need, we can now write the formula for calculating the day of the week
   var centuryValue;
-  if (yearOfBirth>=1700 && yearOfBirth<=1799){
+  if (yearOfBirth>=1600 && yearOfBirth<=1699){
+    centuryValue = 6
+  } else if (yearOfBirth>=1700 && yearOfBirth<=1799){
     centuryValue = 4
   } else if (yearOfBirth>=1800 && yearOfBirth<=1899){
     centuryValue = 2
@@ -30,16 +32,25 @@ function akanGenerator (){
     centuryValue = 0
   } else if (yearOfBirth>=2000 && yearOfBirth<=2099){
     centuryValue = 6
+  } else if (yearOfBirth>=3000 && yearOfBirth<=3099){
+    centuryValue = 4
   }
-  dayOfWeek = (year + (Math.floor(year/4)) +date + month + centuryValue)%7;
-
-  if (gender === "Male"){
-    document.getElementById('output').innerHTML = "Since you are "+ gender+" and you were born on "+weekDays[dayOfWeek]+", your Akan name is "+maleNames[dayOfWeek]+".";
+  // Validate the date and month entered
+  if (isNaN(date) || date <= 0 || date > 31 || isNaN(year)){
+    document.getElementById('output').innerHTML = "YOU ENTERED AN INVALID DATE";
   } else {
-    document.getElementById('output').innerHTML = "Since you are "+ gender+" and you were born on "+weekDays[dayOfWeek]+", your Akan name is "+femaleNames[dayOfWeek]+".";
+    dayOfWeek = (year + (Math.floor(year/4)) +date + month + centuryValue)%7;
+
+    if (gender === "Male"){
+      document.getElementById('output').innerHTML = "Since you are "+ gender+" and you were born on "+weekDays[dayOfWeek]+", your Akan name is "+maleNames[dayOfWeek]+".";
+    } else {
+      document.getElementById('output').innerHTML = "Since you are "+ gender+" and you were born on "+weekDays[dayOfWeek]+", your Akan name is "+femaleNames[dayOfWeek]+".";
+    }
   }
+
 }
+
+// Function for resetting the form.
 function resetForm() {
-  document.getElementById ('output').innerHTML = "Your Akan name will display here";
-  // console.clear();
+  document.getElementById ('output').innerHTML = "Your Akan Name Will Display Here";
 }
