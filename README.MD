@@ -18,6 +18,14 @@ https://kevson102.github.io/Akan-Name-Generator/
 
 ## Known Bugs
 * The name is generated for years between 1600 and 3099 only.
+
+## BDD
+1. The application accepts the user inputs
+2. Only the valid inputs are accepted. Otherwise, the output will be "YOU ENTERED AN INVALID DATE".
+3. Submitting an empty form results in an error message in the output section.
+4. The user can choose there gender from an auto generated list from a dropdown menu.
+5. After entering the date of birth and submitting, the output about the user date of birth and their respective akan name are displayed in the output section.
+6. The user can easily clear the fields by clicking on a reset button after viewing their Akan name.
 ## Technologies Used
 1. HTML
 2. CSS
