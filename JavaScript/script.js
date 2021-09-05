@@ -40,6 +40,6 @@ function akanGenerator (){
   }
 }
 function resetForm() {
-  document.getElementById ('form').reset();
-  document.getElementById ('output').reset();
+  document.getElementById ('output').innerHTML = "Your Akan name will display here";
+  // console.clear();
 }
