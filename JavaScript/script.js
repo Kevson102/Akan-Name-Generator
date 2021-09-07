@@ -36,7 +36,7 @@ function akanGenerator (){
     centuryValue = 4
   }
   // Validate the date and month entered
-  if (isNaN(date) || date <= 0 || date > 31 || isNaN(year)){
+  if (isNaN(date) || date <= 0 || date > 31 || isNaN(year) || year <=0){
     document.getElementById('output').innerHTML = "YOU ENTERED AN INVALID DATE";
   } else {
     dayOfWeek = (year + (Math.floor(year/4)) +date + month + centuryValue)%7;
